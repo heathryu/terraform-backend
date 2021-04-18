@@ -1,4 +1,11 @@
 terraform {
+  backend "s3" {
+    bucket         = "heathryu-terraform-state"
+    region         = "eu-west-2"
+    key            = "terraform-backend.tfstate"
+    dynamodb_table = "heathryu-terraform-state-lock"
+  }
+
   required_version = "~> 0.15.0"
 
   required_providers {
