@@ -6,12 +6,12 @@ terraform {
     dynamodb_table = "heathryu-terraform-state-lock"
   }
 
-  required_version = "~> 0.15.0"
+  required_version = "~> 1.0"
 
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.37.0"
+      version = "~> 3.45.0"
     }
   }
 }
